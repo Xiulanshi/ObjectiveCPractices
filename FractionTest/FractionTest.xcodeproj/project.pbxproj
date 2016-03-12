@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6D0D3B061C93605F00111F49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D3B051C93605F00111F49 /* main.m */; };
 		6D0D3B0E1C9360F600111F49 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D3B0D1C9360F600111F49 /* Fraction.m */; };
+		6D0D3B111C9384D500111F49 /* Complex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D3B101C9384D500111F49 /* Complex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		6D0D3B051C93605F00111F49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D0D3B0C1C9360F600111F49 /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
 		6D0D3B0D1C9360F600111F49 /* Fraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
+		6D0D3B0F1C9384D500111F49 /* Complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
+		6D0D3B101C9384D500111F49 /* Complex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Complex.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				6D0D3B051C93605F00111F49 /* main.m */,
+				6D0D3B0F1C9384D500111F49 /* Complex.h */,
+				6D0D3B101C9384D500111F49 /* Complex.m */,
 				6D0D3B0C1C9360F600111F49 /* Fraction.h */,
 				6D0D3B0D1C9360F600111F49 /* Fraction.m */,
 			);
@@ -124,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D0D3B061C93605F00111F49 /* main.m in Sources */,
+				6D0D3B111C9384D500111F49 /* Complex.m in Sources */,
 				6D0D3B0E1C9360F600111F49 /* Fraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +249,7 @@
 				6D0D3B0B1C93605F00111F49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

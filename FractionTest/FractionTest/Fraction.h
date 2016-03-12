@@ -21,7 +21,6 @@
 -(double) convertToNum;
 //-(void) add: (Fraction *) f;
 
--(Fraction *) add: (Fraction *) f;
 -(void) reduce;
 
 @end
