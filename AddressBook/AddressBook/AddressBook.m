@@ -32,6 +32,12 @@
     [self.book addObject:theCard];
     
 }
+
+- (void) removeCard: (AddressCard *) theCard {
+    
+    [self.book removeObjectIdenticalTo:theCard];
+}
+
 - (NSUInteger) entries {
     
     return self.book.count;
@@ -46,6 +52,16 @@
     
     NSLog(@"=====================================================");
     
+}
+
+- (AddressCard *) lookup: (NSString *) theName {
+    
+    for (AddressCard *nextCard in self.book) {
+        if ([nextCard.name caseInsensitiveCompare:theName] == NSOrderedSame) {
+            return nextCard;
+        }
+    }
+    return nil;
 }
 
 @end
