@@ -65,7 +65,10 @@
 }
 
 - (void) sort {
-    [self.book sortUsingSelector:@selector(compareNames:)];
+   // [self.book sortUsingSelector:@selector(compareNames:)];
+    [self.book sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [[obj1 name] compare:[obj2 name]];
+    }];
 }
 
 

@@ -29,7 +29,7 @@
 }
 
 // Compare the two names from the specified address cards
-- (NSComparisonResult) compareNames: (id) element {
-    return [self.name compare:[element name]];
-}
+//- (NSComparisonResult) compareNames: (id) element {
+//    return [self.name compare:[element name]];
+//}
 @end
