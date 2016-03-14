@@ -11,7 +11,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-    
+    /*
         NSMutableDictionary *glossary = [NSMutableDictionary dictionary];
         
         // Store three entries in the glossary
@@ -36,6 +36,20 @@ int main(int argc, const char * argv[]) {
         NSLog(@"abstract class: %@", glossary[@"abstract class"]);
         NSLog(@"adopt: %@", glossary[@"adopt"]);
         NSLog(@"aechiving: %@", glossary[@"archiving"]);
+     
+     */
+        
+        NSDictionary *glossary = @{
+                                   @"abstract class": @"A class defined so other classes can inherit from it",
+                                   @"adopt": @"To implement all the methods defined in a protocol",
+                                   @"archiving": @"Storing an object for later use"
+                                   };
+        
+        // Print all key-value pairs from the dictionary
+        
+        for (NSString *key in glossary) {
+            NSLog(@"%@: %@", key, glossary[key]);
+        }
        
     }
     return 0;
