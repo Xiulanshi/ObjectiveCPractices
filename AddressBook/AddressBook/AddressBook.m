@@ -64,4 +64,10 @@
     return nil;
 }
 
+- (void) sort {
+    [self.book sortUsingSelector:@selector(compareNames:)];
+}
+
+
+
 @end

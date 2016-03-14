@@ -24,13 +24,15 @@ int main(int argc, const char * argv[]) {
         AddressCard *card3 = [[AddressCard alloc] init];
         AddressCard *card4 = [[AddressCard alloc] init];
         
-        // Set up a new address book
+        AddressBook *myBook = [AddressBook alloc];
         
-        AddressBook *myBook = [[AddressBook alloc] initWithName:@"Linda's Address Book"];
-        
-        AddressCard *myCard;
-        
-        NSLog(@"Entries in address book after creation: %li", [myBook entries]);
+//        // Set up a new address book
+//        
+//        AddressBook *myBook = [[AddressBook alloc] initWithName:@"Linda's Address Book"];
+//        
+//        AddressCard *myCard;
+//        
+//        NSLog(@"Entries in address book after creation: %li", [myBook entries]);
         
         // Now set up four address cards
         
@@ -38,6 +40,8 @@ int main(int argc, const char * argv[]) {
         [card2 setName:bName andEmail:bEmail];
         [card3 setName:cName andEmail:cEmail];
         [card4 setName:dName andEmail:dEmail];
+        
+        myBook = [myBook initWithName:@"Linda's Address Book"];
         
         // Add the cards to the address book
         
@@ -48,35 +52,40 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"Entries in address book after adding cards: %li", [myBook entries]);
         
-//        // List all the entries in the book now
+        // List all the entries in the book now unsorted
+        
+        [myBook list];
+        
+        // Sort it and list it again
+        
+        [myBook sort];
+        [myBook list];
+        
+//        // Look up a person by name
 //        
-//        [myBook list];
-        
-        // Look up a person by name
-        
-        NSLog(@"Stephen Kochan");
-        myCard = [myBook lookup:@"stephen kochan"];
-        
-        if (myCard != nil) {
-            [myCard print];
-        } else {
-            NSLog(@"Not found!");
-        }
-        
-//        // try another lookup
-//        
-//        NSLog(@"Haibo Zhang");
-//        myCard = [myBook lookup:@"Haibo Zhang"];
+//        NSLog(@"Stephen Kochan");
+//        myCard = [myBook lookup:@"stephen kochan"];
 //        
 //        if (myCard != nil) {
 //            [myCard print];
 //        } else {
 //            NSLog(@"Not found!");
 //        }
-        
-        // Now remove the entry from the book
-        [myBook removeCard:myCard];
-        [myBook list];
+//        
+////        // try another lookup
+////        
+////        NSLog(@"Haibo Zhang");
+////        myCard = [myBook lookup:@"Haibo Zhang"];
+////        
+////        if (myCard != nil) {
+////            [myCard print];
+////        } else {
+////            NSLog(@"Not found!");
+////        }
+//        
+//        // Now remove the entry from the book
+//        [myBook removeCard:myCard];
+//        [myBook list];
 
     }
     return 0;
