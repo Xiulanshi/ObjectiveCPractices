@@ -32,4 +32,20 @@
 //- (NSComparisonResult) compareNames: (id) element {
 //    return [self.name compare:[element name]];
 //}
+
+-(void) assignName: (NSString *) theName andEmail: (NSString *) theEmail {
+    
+}
+-(void) encodeWithCoder: (NSCoder *) encoder {
+    
+    [encoder encodeObject:self.name forKey:@"AddressCardName"];
+    [encoder encodeObject:self.email forKey:@"AddressCardEmail"];
+}
+
+-(id) initWithCoder: (NSCoder *) decoder {
+    self.name = [decoder decodeObjectForKey:@"AddressCardName"];
+    self.email = [decoder decodeObjectForKey:@"AddressCardEmail"];
+    
+    return self;
+}
 @end

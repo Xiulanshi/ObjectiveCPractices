@@ -61,6 +61,10 @@ int main(int argc, const char * argv[]) {
         [myBook sort];
         [myBook list];
         
+        if ([NSKeyedArchiver archiveRootObject:myBook toFile:@"addressbook.arch"] == NO)
+            
+            NSLog(@"archiving failed");
+        
 //        // Look up a person by name
 //        
 //        NSLog(@"Stephen Kochan");

@@ -17,4 +17,7 @@
 
 //- (NSComparisonResult) compareNames: (id) element;
 
+// Additional method for NSCopying protocol
+-(void) assignName: (NSString *) theName andEmail: (NSString *) theEmail;
+
 @end

@@ -71,6 +71,18 @@
     }];
 }
 
+- (void) encodeWithCoder:(NSCoder *) encoder {
+
+    [encoder encodeObject:self.bookName forKey:@"AddressBookBookName"];
+    [encoder encodeObject:self.book forKey:@"AddressBookBook"   ];
+}
+
+- (id) initWithCoder:(NSCoder *) decoder {
+    self.bookName = [decoder decodeObjectForKey:@"AddressBookBookName"];
+    self.book = [decoder decodeObjectForKey:@"AddressBookBook"];
+    
+    return self;
+}
 
 
 @end
