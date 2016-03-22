@@ -96,4 +96,22 @@
     denominator /= u;
 }
 
+- (NSArray *)getArrayFromHexInt:(UInt32)hexInt
+{
+   
+    CGFloat red = ((CGFloat) ((hexInt & 0xFF0000) >> 16)) / 255.0;
+    CGFloat green = ((CGFloat) ((hexInt & 0xFF00) >> 8)) / 255.0;
+    CGFloat blue = ((CGFloat) (hexInt & 0xFF)) / 255.0;
+    
+    NSArray *colorArray = @[[NSNumber numberWithFloat:red],
+                            [NSNumber numberWithFloat:green],
+                            [NSNumber numberWithFloat:blue]];
+    
+    return colorArray;
+    
+}
+
+
+
+
 @end

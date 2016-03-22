@@ -23,4 +23,6 @@
 
 -(void) reduce;
 
+- (NSArray *)getArrayFromHexInt:(UInt32)hexInt;
+
 @end

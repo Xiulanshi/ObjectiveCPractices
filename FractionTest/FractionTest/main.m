@@ -209,7 +209,7 @@ int main(int argc, const char * argv[]) {
         result = [a div: b];
         [result print];
         NSLog(@"\n");
-
+        
         
     }
     return 0;
